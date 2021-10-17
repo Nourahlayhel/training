@@ -1,22 +1,22 @@
-body{
-background-image: url('https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg');
-background-repeat: no-repeat;
-background-size:cover;
-
-}
 
 #sec1{font-size:140%;
     font-family:verdana;
    color:whitesmoke;
     display:flex;
     justify-content: space-around;
-    flex-wrap: nowrap;}
-#section{
-    margin-top: 10%;
-    margin-left:5%;
-    margin-right: 40%;
-    margin-bottom: 10%;
+    flex-wrap: nowrap;
+margin-right:40%;}
+.sec2{
+    margin-right:40%;
+    
 }
+
+.section{
+    background-image: url('https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg');
+background-repeat: no-repeat;
+background-size:cover;
+}
+
 #button:hover {
 opacity:0.7;
 }
@@ -68,4 +68,4 @@ input{
 }
 
 #button{width:140px;background-color:white;padding:12px 12px;margin-left:40%;font-size:120%;margin-bottom:20px;}
-#submit{width:140px;background-color:white;padding:12px 12px;margin-left:45%;font-size:120%;margin-bottom:20px;}}
+#submit{width:140px;background-color:white;padding:12px 12px;margin-left:45%;font-size:120%;margin-bottom:20px;}
