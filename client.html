@@ -29,6 +29,8 @@
     <script>
         document.getElementById("button").onclick=authent;
 function authent(){
+  
+  
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 var raw = JSON.stringify({
@@ -48,7 +50,7 @@ fetch("http://localhost:3000/authenticate", requestOptions)
   .then(response => response.text())
   .then(result =>{ console.log(result)
     if(result=="true") window.location.href="https://www.coursera.org/courses?query=javascript"
-    else if(result=="false"){alert("not found");}
+    else if(result=="false") alert("not found");
     else alert('please enter your info')
   })
   .catch(error => console.log('error', error));}

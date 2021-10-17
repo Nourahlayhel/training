@@ -23,6 +23,7 @@
 <script>
     document.getElementById("submit").onclick=addStudent;
 function addStudent(){
+    if( document.getElementById("password").value== document.getElementById("confirm").value){
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 var raw = JSON.stringify({
@@ -47,6 +48,8 @@ fetch("http://localhost:3000/addstudent", requestOptions)
     else alert("fields can't be empty")
     console.log(result)})
 .catch(error => console.log('error', error));}
+
+else alert("please type the same password");}
 
 </script>
 </body>

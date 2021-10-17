@@ -4,15 +4,34 @@ background-color: #ffcccc;
 #sec1{margin-left:100px;font-size:180%;
     font-family:verdana;background-color: white;}
 
+#button:hover {
+opacity:0.7;
+}
+
 #signin{
     width:200px;
     background-color:#ffcccc;
     padding:12px 12px;font-size:120%;margin-bottom:50px;margin-top:50px;}
 #signup{
+  
     width:80px;
     background-color:#ffcccc;
     padding:12px 12px;font-size:70%;margin-bottom:10px;margin-top:10px;margin-right:50px;
 }
+a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+ 
+  a:active {
+    text-decoration: underline;
+  }
+  
 #pp{
     margin-left:300px;
     font-size: 70%;
