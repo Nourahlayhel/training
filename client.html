@@ -8,24 +8,26 @@
 
 </head>
 <body>  
-  
+  <div id="section">
         <div id="sec1">
-          <div id="sign">
-            <p> welcome to our online course</p>
+          <div id="signin">
+            <p> welcome to our online course</p></div>
+            <div id="sign">
           <p id="pp">new here?sign up instead<br>
           <button id="signup"><a href="client2.html">sign up</a></button></p>
-         </div>
-        <label for="ID"> ID: </label></br><input id="IDD" type="number"  placeholder="enter your id">
+         </div></div>
+         <div id="sec2">
+        <label for="ID" class="ll"> ID: </label></br><br><input id="IDD" type="number"  placeholder="enter your id">
     </br></br>
        
  
-        <label for="email">email adress: </label></br> <input id="email" type="email" placeholder="example@gmail.com">
+        <label for="email"class="ll">email adress: </label></br><br> <input id="email" type="email" placeholder="example@gmail.com">
     </br></br>
-        <label for="password">password: </label> </br> <input id="password" type="password" placeholder="enter your password" >
+        <label for="password"class="ll">password: </label> </br><br> <input id="password" type="password" placeholder="enter your password" >
     </br> </br>
     <button id="button">sign in</button>
 </div>
-
+</div>
     <script>
         document.getElementById("button").onclick=authent;
 function authent(){
