@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>  
+  
+        <div id="sec1">
+          <div id="sign">
+            <p> welcome to our online course</p>
+          <p id="pp">new here?sign up instead<br>
+          <button id="signup"><a href="client2.html">sign up</a></button></p>
+         </div>
+        <label for="ID"> ID: </label></br><input id="IDD" type="number"  placeholder="enter your id">
+    </br></br>
+       
+ 
+        <label for="email">email adress: </label></br> <input id="email" type="email" placeholder="example@gmail.com">
+    </br></br>
+        <label for="password">password: </label> </br> <input id="password" type="password" placeholder="enter your password" >
+    </br> </br>
+    <button id="button">sign in</button>
+</div>
+
+    <script>
+        document.getElementById("button").onclick=authent;
+function authent(){
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+var raw = JSON.stringify({
+  "ID": document.getElementById("IDD").value ,
+  "email":document.getElementById("email").value ,
+  "password": document.getElementById("password").value
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:3000/authenticate", requestOptions)
+  .then(response => response.text())
+  .then(result =>{ console.log(result)
+    if(result=="true") window.location.href="https://www.coursera.org/courses?query=javascript"
+    else if(result=="false"){alert("not found");}
+    else alert('please enter your info')
+  })
+  .catch(error => console.log('error', error));}
+
+  </script>
+</body>
+</html>

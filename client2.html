@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>  
+<div>
+<label for="fname">first name </label></br> <input id="fname" type="text" placeholder="enter your first name">
+</br></br>
+<label for="lname">last name </label></br> <input id="lname" type="text" placeholder="enter your last name">
+<br><br>
+    <label for="email">email adress: </label></br> <input id="email" type="email" placeholder="example@gmail.com">
+</br></br>
+    <label for="password">password: </label> </br> <input id="password" type="password" placeholder="enter a new password" >
+</br> </br>
+<label for="password"> confirm your password </label></br> <input id="confirm" type="password" placeholder="enter the password again">
+</div>
+<button type="submit" id="submit">add user</button>
+<script>
+    document.getElementById("submit").onclick=addStudent;
+function addStudent(){
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+var raw = JSON.stringify({
+"ID":1 ,
+"email":document.getElementById("email").value ,
+"password": document.getElementById("password").value
+});
+
+var requestOptions = {
+method: 'POST',
+headers: myHeaders,
+body: raw,
+redirect: 'follow'
+};
+
+fetch("http://localhost:3000/addstudent", requestOptions)
+.then(response => response.text())
+.then(result =>{ 
+    if(result=="done") {
+        alert("user added successfully")}
+    else if(result=="found") alert("user already added")
+    else alert("fields can't be empty")
+    console.log(result)})
+.catch(error => console.log('error', error));}
+
+</script>
+</body>
