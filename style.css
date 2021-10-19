@@ -5,19 +5,27 @@
     display:flex;
     justify-content: space-around;
     flex-wrap: nowrap;
-margin-right:40%;}
+margin-right:40%;
+margin-top: 10px;
+}
+
 .sec2{
     margin-right:40%;
     
 }
 
-.section{
-    background-image: url('https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg');
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
+  
+body{
+background-image: url('https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg');
 background-repeat: no-repeat;
 background-size:cover;
-background-attachment: fixed;
-min-height:100%;
+
 min-width:fit-content;
+background-attachment: fixed;
 }
 
 #button:hover {
@@ -30,16 +38,16 @@ opacity:0.7;
     margin-left:45%;
 }
 #signin{
-
-    padding:12px 12px;font-size:120%;margin-bottom:50px;margin-top:30px;}
+    padding:12px 12px;font-size:120%;margin-bottom:50px;margin-top:30px;margin-left: 40px;}
 #signup{
     width:100px;
     background-color:white;
-    padding:12px 12px;font-size:70%;margin-top:10px;margin-right:50px;
+    padding:12px 12px;font-size:70%;margin-top:10px;
+  
 }
 a{
   
-    font-size:20px;
+   font-size:20px;
     color:black;
 }
 a:link {
