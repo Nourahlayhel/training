@@ -32,11 +32,11 @@ i=0;
 while(i<data.length&&req.body.email!=data[i].email)
 i++;
 if (i==data.length){
-  req.body.ID=uuidv4();
+req.body.ID=uuidv4();  
 data.push(req.body)
 xlsx.utils.sheet_add_json(reader.Sheets["Sheet1"] , data)
 xlsx.writeFile(reader,'students.xlsx')
-res.send("done")
+res.send(req.body.ID)
 }
 else res.send("found")
   }
@@ -55,7 +55,7 @@ res.send("true");
 }
 else {console.log("wrong email or password")
 res.send("false")}}
- else{ res.send("false")
+ else {res.send("false")
 console.log("id does not exist")}
     }
 

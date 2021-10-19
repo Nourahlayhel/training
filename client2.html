@@ -45,11 +45,9 @@ redirect: 'follow'
 fetch("https://immense-retreat-06463.herokuapp.com/addstudent", requestOptions)
 .then(response => response.text())
 .then(result =>{ 
-    if(result=="done") {
-        alert("user added successfully")}
-    else if(result=="found") alert("user already added")
-    else alert("fields can't be empty")
-    console.log(result)})
+     if(result=="found") alert("user already added")
+    else if(result=="empty")alert("fields can't be empty")
+else alert("this is your id "+ result)})
 .catch(error => console.log('error', error));}
 
 else alert("please type the same password");}
