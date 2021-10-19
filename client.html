@@ -48,7 +48,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:3000/authenticate", requestOptions)
+fetch("https://git.heroku.com/immense-retreat-06463.git/authenticate", requestOptions)
   .then(response => response.text())
   .then(result =>{ console.log(result)
     if(result=="true") window.location.href="https://www.coursera.org/courses?query=javascript"
