@@ -45,21 +45,21 @@ else res.send("found")
 
   app.post('/authenticate',function(req,res){
     console.log(req.body)
-    if(req.body.ID!=0){
+    if(req.body.ID!=""){
       i=0;
       while(i<data.length&&req.body.ID!=data[i].ID)
       i++;
-      if(req.body.ID==data[i].ID){
+    if(req.body.ID==data[i].ID){
 if(req.body.email==data[i].email&&req.body.password==data[i].password){
 res.send("true");
 }
-else{ console.log("wrong email or password")
+else {console.log("wrong email or password")
 res.send("false")}}
-else console.log("this id does not exist");
-res.send("false");}
+ else{ res.send("false")
+console.log("id does not exist")}
+    }
 
-else res.send("null")
+  else res.send("nn")
       
-
      })
 app.listen(process.env.PORT||3000);

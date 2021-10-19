@@ -17,7 +17,7 @@
           <button id="signup"><a href="client2.html">sign up</a></button></p>
          </div></div>
          <div class="sec2">
-        <label for="ID" class="ll"> ID: </label></br><br><input id="IDD" type="number"  placeholder="enter your id">
+        <label for="ID" class="ll"> ID: </label></br><br><input id="IDD" type="text"  placeholder="enter your id">
     </br></br>
        
  
@@ -52,8 +52,8 @@ fetch("https://immense-retreat-06463.herokuapp.com/authenticate", requestOptions
   .then(response => response.text())
   .then(result =>{ console.log(result)
     if(result=="true") window.location.href="https://www.coursera.org/courses?query=javascript"
-    else if(result=="false") alert("not found");
-    else alert('please enter your info')
+    else{if(result=="false") alert(' not found')
+    else alert('please enter your infos')}
   })
   .catch(error => console.log('error', error));}
 
