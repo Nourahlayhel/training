@@ -42,7 +42,7 @@ body: raw,
 redirect: 'follow'
 };
 
-fetch("https://git.heroku.com/immense-retreat-06463.git/addstudent", requestOptions)
+fetch("https://immense-retreat-06463.herokuapp.com/addstudent", requestOptions)
 .then(response => response.text())
 .then(result =>{ 
     if(result=="done") {
