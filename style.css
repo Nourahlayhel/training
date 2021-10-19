@@ -80,4 +80,4 @@ input{
 }
 
 #button{width:140px;background-color:white;padding:12px 12px;margin-left:40%;font-size:120%;margin-bottom:20px;}
-#submit{width:140px;background-color:white;color:black;padding:12px 12px;margin-left:45%;font-size:120%;margin-bottom:20px;}
+#submit{width:140px;background-color:white;color:black fixed;padding:12px 12px;margin-left:45%;font-size:120%;margin-bottom:20px;}
