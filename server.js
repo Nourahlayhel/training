@@ -1,6 +1,6 @@
 var xlsx= require('xlsx');
 const express=require('express');
-const fs=require('fs');
+
 const cors=require('cors');
 const bodyParser=require('body-parser');
 var reader =xlsx.readFile('students.xlsx');
